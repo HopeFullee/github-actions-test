@@ -4,10 +4,13 @@
 name: Github Actions로 테스트 자동화하기
 # 언제 이 작업을 실행할지 정의
 # push: github에 push할 때마다 실행
-on: push
+on:
+  pull_request:
+    branches: main
 
 # 어떤 직업
 jobs:
+  # repo setting -> Require status check to pass -> add 에 아래 jobs 이름 "test" 추가
   test:
     # 어떤 환경에서 실행할거야?
     runs-on: ubuntu-latest
@@ -20,6 +23,7 @@ jobs:
         # actions 사용할 때 옵션 -> with
         with:
           node-version: 24
+          cache: "npm"
 
       - name: 의존성 (Library) 설치
         run: npm ci
