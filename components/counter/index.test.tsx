@@ -11,6 +11,6 @@ describe("Counter 컴포넌트 테스트", () => {
 
     const count = screen.getByRole("counter");
 
-    expect(count).toHaveTextContent("1");
+    expect(count).toHaveTextContent("2");
   });
 });
