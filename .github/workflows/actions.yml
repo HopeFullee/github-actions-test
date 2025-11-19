@@ -22,6 +22,7 @@ jobs:
         # actions 사용할 때 옵션 -> with
         with:
           node-version: 24
+          cache: "npm"
 
       - name: 의존성 (Library) 설치
         run: npm ci
