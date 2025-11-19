@@ -26,5 +26,5 @@ jobs:
       - name: 의존성 (Library) 설치
         run: npm ci
 
-      - name: 테스트 실행하기
+      - name: test
         run: npm run test
