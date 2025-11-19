@@ -6,7 +6,7 @@ name: Github Actions로 테스트 자동화하기
 # push: github에 push할 때마다 실행
 on:
   pull_request:
-    branches: -main
+    branches: main
 
 # 어떤 직업
 jobs:
